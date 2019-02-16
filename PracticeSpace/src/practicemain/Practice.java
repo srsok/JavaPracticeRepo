@@ -3,7 +3,7 @@ package practicemain;
 import datastructure.*;
 import java.util.*;
 
-import algorithm.QuickSortModule;
+import algorithm.*;
 public class Practice {
 
 	public static void main(String[] args) {
@@ -20,6 +20,8 @@ public class Practice {
 		
 		//graphTest();
 		quicksortTest();
+		selectionsortTest();
+		insertionsortTest();
 	}
 	
 	private static void intArrayTest() {
@@ -129,6 +131,20 @@ public class Practice {
 		qs.print();
 		qs.sort();
 		qs.print();
+	}
+	private static void selectionsortTest() {
+		int[] arr = {3,9,4,7,5,0,1,6,8,2};
+		SelectionSortModule ss = new SelectionSortModule(arr);
+		ss.print();
+		ss.sort();
+		ss.print();
+	}
+	private static void insertionsortTest() {
+		int[] arr = {3,9,4,7,5,0,1,6,8,2};
+		InsertionSortModule is = new InsertionSortModule(arr);
+		is.print();
+		is.sort();
+		is.print();
 	}
 	private static <T> void printTree(TreeModule<T> node, String appender) {
 		System.out.println(appender + node.getData());
